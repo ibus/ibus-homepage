@@ -1,0 +1,17 @@
+#summary Install IBus on Gentoo
+#labels Phase-Deploy
+#sidebar SideNavi
+
+IBus is in Portage, you can simply use emerge to install every component of IBus.
+After update portage (and update-eix if you have eix installed), to see which component you can emerge from portage, simply type `emerge -s ibus` (or `eix ibus` ).
+=== IBus ===
+{{{
+# echo "app-i18n/ibus ~x86" >> /etc/portage/package.keywords/ibus
+# emerge -av ibus
+}}}
+=== IBus Components ===
+e.g, ibus-pinyin
+{{{
+# echo "app-i18n/ibus-pinyin ~x86" >> /etc/portage/package.keywords/ibus
+# emerge -av ibus-pinyin
+}}}

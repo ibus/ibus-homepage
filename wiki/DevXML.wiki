@@ -1,0 +1,40 @@
+#summary XML spec for IBus
+#labels Phase-Implementation
+#sidebar SideNavi
+
+= XML spec for ibus component =
+
+{{{
+<?xml version="1.0" encoding="utf-8"?>
+<!-- filename: pinyin.xml -->
+<component>
+    <name>org.freedesktop.IBus.Pinyin</name>
+    <description>Pinyin Component</description>
+    <exec>/usr/libexec/ibus-engine-pinyin --ibus</exec>
+    <version>1.2.99.20091228</version>
+    <author>Peng Huang &lt;shawn.p.huang@gmail.com&gt;</author>
+    <license>GPL</license>
+    <homepage>http://code.google.com/p/ibus</homepage>
+    <textdomain>ibus-pinyin</textdomain>
+    <!--
+      <observed-paths>
+          <path>/usr/share/m17n/</path>
+          <path>~/.m17n</path>
+      </observed-paths>
+      <engines exec="/usr/libexec/ibus-engine-m17n --xml" />
+    -->
+    <engines>
+        <engine>
+            <name>pinyin</name>
+            <language>zh</language>
+            <license>GPL</license>
+            <author>Peng Huang &lt;shawn.p.huang@gmail.com&gt;</author>
+            <icon>/usr/share/ibus-pinyin/icons/ibus-pinyin.svg</icon>
+            <layout>us</layout>
+            <longname>Pinyin</longname>
+            <description>Pinyin input method</description>
+            <rank>0</rank>
+        </engine>
+    </engines>
+</component>
+}}}

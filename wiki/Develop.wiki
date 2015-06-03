@@ -1,0 +1,8 @@
+#summary Guide for engine developer
+#labels Phase-Implementation
+#sidebar SideNavi
+= How to develop a new engine =
+ * download ibus template project, and begin from it.
+{{{
+ $ git clone git://github.com/ibus/ibus-tmpl.git ibus-tmpl
+}}}

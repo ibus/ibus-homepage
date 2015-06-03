@@ -1,0 +1,18 @@
+#summary Install IBus on Debian
+#labels Phase-Deploy
+#sidebar SideNavi
+
+<wiki:toc max_depth="1" />
+
+The default input method for Debian is SCIM. To install iBus, use the following command.
+{{{
+sudo apt-get install ibus im-switch
+sudo apt-get install ibus-pinyin # or other engine(s) you want
+im-switch -s ibus
+# logout and re-login
+ibus-setup # add input methods you want
+}}}
+
+== Note: ==
+
+  # The iBus version is 1.3.7 in the stable distribution("Squeeze"), and 1.4.1 in both testing and sid distribution("Wheezy").

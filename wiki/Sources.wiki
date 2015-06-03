@@ -1,0 +1,50 @@
+#summary Source repository page
+#labels Phase-Implementation
+#sidebar SideNavi
+
+= Source repository =
+You can check out the latest unstable source code of IBus using git. Or browse source code via [http://github.com/ibus/ web interface] .
+
+== IBus Core ==
+{{{
+ $ git clone git://github.com/ibus/ibus.git ibus
+}}}
+
+== IBus Qt4 ==
+{{{
+ $ git clone git://github.com/ibus/ibus-qt.git ibus-qt
+}}}
+
+== Chinese !PinYin engine ==
+{{{
+ $ git clone git://github.com/ibus/ibus-pinyin.git ibus-pinyin
+}}}
+
+== General Table engine ==
+{{{
+ $ git clone git://github.com/kaio/ibus-table.git ibus-table
+}}}
+== Chinese Chewing engine ==
+{{{
+ $ git clone git://github.com/definite/ibus-chewing.git ibus-chewing
+}}}
+
+== Japanese Anthy engine ==
+{{{
+ $ git clone git://github.com/ibus/ibus-anthy.git ibus-anthy
+}}}
+
+== Korean Hangul engine ==
+{{{
+ $ git clone git://github.com/choehwanjin/ibus-hangul.git ibus-hangul
+}}}
+
+== M17N engine == 
+{{{
+ $ git clone git://github.com/ibus/ibus-m17n.git ibus-m17n
+}}}
+
+== Template engine == 
+{{{
+ $ git clone  git://github.com/ibus/ibus-tmpl.git ibus-tmpl
+}}}

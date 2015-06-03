@@ -1,0 +1,66 @@
+#summary Frequently Asked Questions - Chinese Version
+#labels Featured
+#sidebar SideNavi
+
+<wiki:toc max_depth="1" />
+
+= ibus =
+== 我的IBus托盘图标不见了！ ==
+如果你用的是Ubuntu，那么这个问题是由一个Ubuntu才有的补丁引起的。
+
+https://bugs.launchpad.net/ubuntu/+source/ibus/+bug/875435
+
+试一下下面的命令：
+{{{
+ibus-daemon -drx
+}}}
+
+== 在Kubuntu上我用不了IBus！ ==
+这是Ubuntu的一个打包bug。
+
+https://bugs.launchpad.net/ubuntu/+source/ibus/+bug/854333
+
+你可以用下面的命令作为临时解决方案。
+{{{
+sudo apt-get install gnome-icon-theme
+}}}
+
+= ibus-pinyin =
+== 我用的是Arch。ibus-pinyin一直在双拼模式! ==
+请改用ibus-libpinyin，在Community仓库中就有。
+
+ibus-libpinyin的界面和ibus-pinyin的很像。
+
+如果你想帮助我们（解决这个问题），请到Issue 1542继续讨论。
+
+= ibus-table =
+
+== 我用table-XXX输入不了繁体中文字符！ ==
+这很可能是因为你的中文模式不正确。
+
+你可以用Ctrl+;组合键来切换中文模式
+
+如果你的中文模式不能保存，你可以更改/usr/share/ibus-table/engine/table.py中的get_chinese_mode函数来设置你的默认全局配置（应用于所有表）。
+
+我们已经知道这样的解决方案不够好, 请参考Issue 1188
+
+== 如何改变table-XXX的候选词个数？ ==
+你可以更改/usr/share/ibus-table/engine/table.py中的 {{{_page_size = 6}}} （把6改成你想要的数字）来设置你的默认全局配置（应用于所有表）。
+
+我们已经知道这样的解决方案不够好, 请参考Issue 1474
+
+== 如何改变table-XXX的空格键响应行为？我用空格键来翻页而不是上屏（送字）。 ==
+你可以参考下面页面中的hack，查看历史版本，如果需要的话。
+
+http://zh.wikipedia.org/wiki/IBus
+
+它们也是全局（应用于所有表）的更改。我们还没核实它们的有效性。
+
+我们已经知道这样的解决方案不够好, 请参考Issue 861
+
+= 未知 =
+
+== 要是我的问题没被列出来或我根本看不懂这些答案怎么办？ ==
+欢迎在ibus-user上问问题。
+
+https://groups.google.com/group/ibus-user/

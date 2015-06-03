@@ -1,0 +1,6 @@
+#labels Featured
+#sidebar SideNavi
+
+= Introduction =
+
+IBus - Intelligent Input Bus for Linux / Unix OS

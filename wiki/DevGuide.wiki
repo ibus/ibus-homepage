@@ -1,0 +1,101 @@
+#summary Developer guide
+#labels Phase-Implementation
+#sidebar SideNavi
+
+= Build & Install From Git repository =
+== System requirements == 
+ * python >= 2.5
+ * dbus-glib >= 0.74
+ * dbus-python >= 0.83.0
+ * iso-codes
+ * qt >= 4.4.0  _*(if want to build qt4 im module)*_
+ * anthy  _*(if want to build anthy engine)*_
+ * python-enchant & hunspell-en  _*(if want to build pinyin engine or enchant demo engine)*_
+ * libhangul _*(if want to build hangul engine)*_
+
+== Build & Install ibus ==
+{{{
+ $ git clone git://github.com/ibus/ibus.git ibus
+ $ cd ibus
+ $ ./autogen.sh --prefix=/usr --sysconfdir=/etc
+ $ make
+ $ sudo make install
+ $ update-gtk-immodules `uname -i`
+or
+ $ gtk-query-immodules-2.0-32 > /etc/gtk-2.0/i386-redhat-linux-gnu/gtk.immodules
+}}}
+*(the path _/etc/gtk-2.0/i386-redhat-linux-gnu/gtk.immodules_ may be different in your system)*
+
+== Build & Install PinYin engine ==
+{{{
+ $ git clone git://github.com/ibus/ibus-pinyin.git ibus-pinyin
+ $ cd ibus-pinyin
+ $ ./autogen.sh --prefix=/usr
+ $ make
+ $ sudo make install
+}}}
+
+== Build & Install m17n engine ==
+{{{
+ $ git clone git://github.com/ibus/ibus-m17n.git ibus-m17n
+ $ cd ibus-m17n
+ $ ./autogen.sh --prefix=/usr
+ $ make
+ $ sudo make install
+}}}
+
+== Build & Install anthy engine ==
+{{{
+ $ git clone git://github.com/ibus/ibus-anthy.git ibus-anthy
+ $ cd ibus-anthy
+ $ ./autogen.sh --prefix=/usr
+ $ make
+ $ sudo make install
+}}}
+
+== Build & Install Chewing engine ==
+{{{
+ $ git clone git://github.com/definite/ibus-chewing.git
+ $ cd ibus-chewing
+ $ cmake . -DCMAKE_INSTALL_PREFIX='/usr'
+ $ make
+ $ sudo make install
+ $ sudo make install_schema
+}}}
+
+
+
+== Build & Install hangul engine ==
+{{{
+ $ git clone git://github.com/ibus/ibus-hangul.git ibus-hangul
+ $ cd ibus-hangul
+ $ ./autogen.sh --prefix=/usr
+ $ make
+ $ sudo make install
+}}}
+
+== Build ibus rpms ==
+{{{
+ $ git clone git://github.com/ibus/ibus.git ibus
+ $ cd ibus
+ $ ./autogen.sh --prefix=/usr
+ $ make rpm
+ # list rpms
+ $ ls `uname -i`
+}}}
+
+= Test ibus =
+== Run ibus ==
+{{{
+ # use ibus-setup to enable ibus and engines
+ $ /usr/bin/ibus-setup
+}}}
+== Run gnome, kde or old X applications ==
+{{{
+ # gtk application
+ $ GTK_IM_MODULE=ibus gedit
+ # kde application
+ $ QT_IM_MODULE=ibus kwrite
+ # old X application
+ $ XMODIFIERS="@im=ibus" xterm
+}}}

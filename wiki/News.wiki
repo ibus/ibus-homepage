@@ -1,0 +1,98 @@
+#summary News
+#labels Featured
+#sidebar SideNavi
+
+= News =
+ * *2010-11-25* ibus 1.3.9 stable release
+  * Fix compatible issues with gnome-do and chromium-browser.
+  * Fix XIM compatible issue in ppc64 platform.
+  * Fix some build problems with gtk3
+  * Sort input method in setup with strcoll
+  * Fix some problem in Makefile for NetBSD
+
+ * *2010-10-22* ibus 1.3.8 stable release
+  * Fix CPU 100% usage with signal.SIGCHLD
+  * Destroy existing connection before creating a new connection, and only create the fake context once.
+  * Move the candidate window just above the cursor when the window and a preedit string overlap.
+  * Enable key snooper by default again
+  * Always consume the hotkey, even if the hotkey associated engine already activated.
+  * Fix race condition in bus_ibus_impl_create_engine()
+  * Fix a build error of IBus-1.0.gir with gobject-introspection 0.9.6
+  * Implement stress tool for ibus.
+  * Fix a build error with GTK3 gdkkeysyms.h
+  * Add time info in log message from satorux@chromium.org
+  * Fix memory leak in ibus_input_context_process_key_event by Fujiwarat
+  * Fix segv in bus_engine_proxy_process_key_event_reply_cb
+  * Fix property issue.
+  * Updated many translations.
+
+ * *2010-06-12* ibus 1.3.5 stable release
+  * Support gtk3
+  * Support gobject-introspection
+  * Support vala language
+  * Fix some bugs
+
+ * *2010-05-29* ibus-pinyin 1.3.8 stable release
+  * Fix config problem
+  * Fix punct editor problem
+
+ * *2010-05-28* ibus-pinyin 1.3.7 stable release
+  * Add Ctrl + Shift + F to switch between Simplified Chinese and Traditional Chinese.
+  * Reset Pinyin properties when enable input method.
+  * Add ZhuYin (Bopomofo) input method setup UI
+  * Add Several ZhuYin keyboard mappings (Standard GinYieh Eten IBM).
+
+ * *2010-05-19* ibus-pinyin 1.3.6 stable release
+  * Add Chinese ZhuYin input method, contributed by BYVoid [http://www.byvoid.com/blog/ibus-pinyin-bopomofo-preview/ more information]
+  * Add punct input mode. Press '`' could switch punct input mode.
+  * Fix crash in pinyin parser.
+
+ * *2010-05-05* ibus 1.3.3 stable release
+  * Add configure option to disable key snooper in gtk im context
+  * Fix a crash in ibus-x11
+  * Fix a crash in ibus-daemon
+  * For show language bar option, use *{Embedded in menu}* to replace *{Never}*.
+  * Update some translation files
+
+ * *2010-05-03* ibus-pinyin 1.3.5 stable release
+  * Fix double pinyin parse problem
+  * Remove dependence library sigc++ 
+  * Fix half full punct problem
+  * Clear preedit text, when user presses Shift to switch En/Ch mode
+  * Support auto correct: v=>u, ve=>ue, van=>uan, vn=>un, ven=>un, vang=>uang
+  * Refine pinyin parser to split pinyin more accuracy.
+  * Fix build problems in BSD
+  * Several bug fixing
+
+ * *2010-04-21* ibus 1.3.2 stable release
+  * Fix crash if ibus loads engine.xml failed
+  * Fix focus problems
+  * Does not hard code iso-codes location
+  * Fix link problem with binutils-gold
+  * Updated translations.
+
+ * *2010-04-15* ibus-pinyin 1.3.3 stable release
+  * Support user custom phrases [http://github.com/phuang/ibus-pinyin/blob/master/src/phrases.txt phrases.txt]
+  * Fix build problems in BSD
+  * Several bug fixing
+
+ * *2010-04-11* ibus-pinyin 1.3.2 stable release
+  * Do not prefetch data to save several seconds during start
+  * Several bug fixing
+
+ * *2010-04-05* ibus-pinyin 1.3.1 stable release
+  * Optimize database query method for better performance
+  * Many bug fixing
+
+ * *2010-03-30* ibus 1.3.1 stable release
+  * Fixed candidates windows bug
+  * Does not check glib micro version in ibus im module
+  * Simplified build output
+  * Added some configure arguments
+  * Updated translations.
+
+ * *2010-03-21* ibus 1.3.0 stable release
+  * use floating IBusObject
+  * support share one global engine in all applications
+  * some ui improvements
+  * many bug fixing

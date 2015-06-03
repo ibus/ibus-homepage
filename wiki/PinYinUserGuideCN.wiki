@@ -1,0 +1,103 @@
+#summary PinYin user guide - Chinese version
+#labels Featured
+#sidebar SideNavi
+= 拼音输入简介 =
+
+本拼音输入法，是基于IBus，使用C++语言开发的智能拼音输入法。
+
+= 输入法上手指南 =
+
+== 怎样安装？ ==
+=== Fedora  ===
+ * 用 `root` 身份在终端下，运行下面命令：
+
+{{{
+yum install ibus-pinyin ibus ibus-gtk ibus-qt
+}}}
+ * 使用im-chooser命令，选择ibus为默认输入法
+ * 重新登录桌面系统。
+
+=== Ubuntu ===
+
+ * 在终端，运行下面命令：
+{{{
+sudo apt-get install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4
+sudo apt-get install ibus-pinyin
+im-switch -s ibus
+}}}
+ * 重新登录桌面系统。
+
+=== openSUSE ===
+
+感謝來自臺灣的朋友[http://jingshouse.blogspot.com/ Jing Lai]爲我們提供了openSUSE的軟件源。使用方法如下：
+
+{{{
+sudo zypper ar http://download.opensuse.org/repositories/home:/jingtw/openSUSE_11.2/ jingtw
+sudo zypper ref jingtw
+sudo zypper in ibus ibus-gtk ibus-qt ibus-pinyin ibus-pinyin-db-open-phrase
+}}}
+
+== 新手指南 ==
+=== 怎样切换出本输入法？ ===
+将鼠标点击要输入汉字的地方，点击一下，按 "Ctrl + Space"启动输入法，然后用鼠标在SCIM托盘上选择拼音输入法。
+
+http://ibus.googlecode.com/svn/trunk/images/pinyin-1.png
+
+=== 怎样翻页选字？ ===
+用户可以用 `PageUp`,`PageDown`, 逗号（,）句号（.） 和 减号（-），等于号（=）翻页。
+
+=== 怎样进行中英文切换？ ===
+按Shift按钮就可以在中英文之间进行切换。
+
+=== 如何删除错误的用户自己造的词？ ===
+当用户输入一串拼音的时候，用户自己造的词会在候选词选择窗口里以高亮颜色显示，用户可一按Ctrl加上数字键，删除数字对用的词。
+
+例如，输入拼音zhongguobeijing,
+
+http://ibus.googlecode.com/svn/trunk/images/pinyin-2.png
+
+"中国被京"是错误的用户自造词，它在第一个位置，用户按 "Ctrl + 1" 把这个自造词删除。
+
+=== 为什么有时候第一个候选词是红色的？ ===
+当用户输入的拼音在系统词典和用户词典无法找到匹配的词语时，输入法会自动为您创建一个可能的新词，这个自动生成的新词会以红色显示，提示您确认这个自动生成的词语是否正确。
+
+=== 特殊词语 ===
+输入法里定义了一些特殊词语，可以方便用户的输入。
+例如：
+|| haha || o(∩_∩)o...哈哈 ||
+|| xixi || `(*^__^*) 嘻嘻……` ||
+|| rq || 2008年1月8日 ||
+|| xq || 星期五 ||
+|| lb || 礼拜五 ||
+|| sj || 15时51分27秒 ||
+|| bsn || ╭∩╮（︶︿︶）╭∩╮鄙视你！||
+
+http://ibus.googlecode.com/svn/trunk/images/wiki-pinyin-4.png
+
+=== 如何在中文模式下方便的输入英语 ===
+用户只要输入字母 v 输入法将自动切换到英文输入模式，在这个临时的英文输入模式里，按回车键确认输入并返回中文输入模式，按ESC返回中文模式。
+
+当用户输入大写字母开头的英文时，不需要输入 v ，输入法就可以自动进入临时英文输入模式。
+
+在临时英语输入模式下，输入引擎将提过拼写检查，和建议功能。
+http://ibus.googlecode.com/svn/trunk/images/wiki-pinyin-7.png
+
+=== 什么是拼音纠错功能？ ===
+
+当用户快速输入拼音时，很容易输入发生错误，拼音纠错功能可以纠正几种常见的错误。
+例如：ign->ing，img->ing，uei->ui，uen->un，iou->iu。
+
+=== 其他功能 ===
+ * 自动在数字后面输入半角句号。 例如： 1.2.3 而不是1。2。3。
+
+=== 输入法有那些快捷键？ ===
+|| Shift || 中英文切换 ||
+|| Shift + Space || 字母全角/半角切换 ||
+|| Ctrl + . || 符号全角/半角切换 ||
+|| Ctrl + Space || 启动关闭输入法 ||
+|| Ctrl + 数字 || 删除数字对应的用户自造词 ||
+|| 回车按钮 || 直接输入英文 ||
+
+=== 如何反馈意见？ ===
+ * 在IBus的[http://groups.google.com/group/ibus-user 讨论组]发信讨论（推荐）。
+ * 在issue列表里创建新的[http://code.google.com/p/ibus/issues/entry issue]。

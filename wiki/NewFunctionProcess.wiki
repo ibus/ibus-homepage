@@ -1,0 +1,51 @@
+#summary List and Review Progress of Future Functions.
+#labels Phase-Design
+#sidebar SideNavi
+
+= Introduction =
+
+This is the page for list and decision progress of future functions.
+
+To submit for a new function is very simple which involves 5 processes: Application, Review, Decision, Documentation, Implementation. Each process has 3 stages: Pending, During, Finished. There are 4 stakeholders included in Review Processes: Users, Developers, Project Manager, Writers. A person may played in more than one role when needed.
+
+Future Functions at a Glance is at FutureFunctionsAtaGlance.
+
+= Stakeholders =
+
+== Users ==
+
+The users use the system or specific modules. The users provide feedback on usability and general testing feedback to the developers.
+
+== Developers ==
+
+The developers develop the system or specific modules. The developers resolve bugs and enhance the system or specific modules by requests of the users or internal plans of the developers.
+
+== Project Manager ==
+
+The project manager manage the project. The project manager makes the final decision on proposals from when there are divergence on ideas. The project manager could endorse its power to sub-team leader. 
+
+== Writers ==
+
+The writers write the documentation. The writers are responsible to archive all info of New Function Process.
+
+= Processes =
+
+== Application ==
+
+People who want new function should submit at [http://code.google.com/p/ibus/issues/list Issue Tracker]. For discussion of new functions could be done on [http://groups.google.com/group/ibus-devel ibus-devel mailing list].
+
+== Review ==
+
+Developers will review the review on the application based on their knowledge, skills, experience, and project resources. There would be further discussion to be performed in the Issue Tracker tickets until decision is possible to make.
+
+== Decision ==
+
+The lead developer of specific modules will make the decision whether the request is approved, rejected, or stalled. The project manager could overrule the decision if it believed such decision against the goals of the project.
+
+== Documentation ==
+
+The writers take records on every process. This includes updating FutureFunctionsAtaGlance and tickets in Issue Tracker, compiling documentation of the plans and the implementation, etc.
+
+== Implementation ==
+
+The developers implement the new functions according to the plan compiled by the writers. Once the implementation is appropriate for testing by users, the new code will be released. Discussions among developers and users are carried out until the new function is claimed working (or partially) and satisfied by most participated users.
