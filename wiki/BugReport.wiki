@@ -8,7 +8,7 @@ The old issues in [https://code.google.com/p/ibus/issues/list](https://code.goog
 ## Bug links for components ##
 * [ibus core (ibus-daemon, ibus-ui-gtk3, libibus.so, im-ibus.so for gtk2 and gtk3)](https://github.com/ibus/ibus/issues)
 * [ibus-qt4](https://github.com/ibus/ibus-qt/issues)
-* [ibus-pinyin](https://github.com/ibus/ibus-qt/issues)
+* [ibus-pinyin](https://github.com/ibus/ibus-pinyin/issues)
 * [ibus-table](https://github.com/mike-fabian/ibus-table/issues)
 * [ibus-table-others](https://github.com/mike-fabian/ibus-table-others/issues)
 * [ibus-table-chinese](https://github.com/mike-fabian/ibus-table-chinese/issues)
