@@ -1,65 +1,70 @@
-#summary README for IBus-Table.
-#labels Featured
-#sidebar SideNavi
-=中文=
-IBus-Table是为基于码表的输入法即所谓的形码开发的输入法框架，常见的形码有郑码、五笔、仓颉、二笔等。
-之所以开发IBus-Table纯粹是为了让Linux的用户能充分享受形码输入的乐趣。当然它远远还没有完美，所以如果你有任何希望或建议，或者发现了bug，请在[http://code.google.com/p/ibus/issues issue列表]上填上一个issue，或者直接发邮件给我<acevery@gmail.com>，我会非常高兴听到你的心声的。
+README for IBus-Table.
 
-==快捷键==
+Featured
+
+# 中文 #
+IBus-Table是为基于码表的输入法即所谓的形码开发的输入法框架，常见的形码有郑码、五笔、仓颉、二笔等。
+之所以开发IBus-Table纯粹是为了让Linux的用户能充分享受形码输入的乐趣。当然它远远还没有完美，所以如果你有任何希望或建议，或者发现了bug，请在[issue列表](http://code.google.com/p/ibus/issues) 上填上一个issue，或者直接发邮件给我<acevery@gmail.com>，我会非常高兴听到你的心声的。
+
+## 快捷键 ##
     注意: Ctrl是Ctrl键，Shift_L是左边的Shift键，Shift_R是右边的Shift键，Alt是Alt键，Arrow_Left是指向左边的方向键，Arrow_Right就是指向右边的方向键，同理可知Arrow_Up和Arrow_Down的意思。[1~9]是指从数字键1到数字键9中的任意一个。
 
-||按键||作用||
-||Space||提交输入的字词||
-||Shift_L||当没有按其它键进行输入的时候是中英文切换，在输入中的时候是把第一个候选词提交到预编辑词组中||
-||Shift_R||拼音模式和一般模式的切换||
-||Shift_L/Shift_R＋[1~5]||在拼音模式下输入拼音的声调，在输入框中可以看到↑1, ↑2, ↑3, ↑4, ↑5这样的声调表示。代表阴平，2表示阳平，3意思是上声，4就是去声了，5则代表轻声||
-||Arrow_Left||在预编辑词组中把光标向左移动一个字||
-||Arrow_Right||在预编辑词组中把光标向右移动一个字||
-||Backspace||删除最后一个输入的按键或预编辑词组中的最后一个字||
-||Delete||删除预编辑词组光标后的一个字||
-||Ctrl+Arrow_Left||把光标移到预编辑词组的最前部||
-||Ctrl+Arrow_Left||把光标移到预编辑词组的最前部||
-||Ctrl+Backspace||删除光标前部的预编辑词组||
-||Ctrl+Delete||删除光标后部的预编辑词组||
-||Esc||重置输入法||
-||[1~9]||选择并提交相应的字词||
-||Ctrl+[1~9]||选择相应的字词到预编辑词组中||
-||Alt+[1~9]||删除相应位置的用户自定义词组||
-||Page_Up/Page_Down||上一页或下一页的候选字词||
-||-/+||当没有作为输入键的时候作用和Page_UP/Page_Down相同||
-||Ctrl+,||激活或关闭单字模式||
-||Ctrl+.||切换全角/半角标点||
-||Ctrl+/||激活或关闭直接上屏模式||
-||Ctrl+;||中文输入时切换不同的字符范围，如GBK，GB18030等||
+|   |   |
+|---|---|
+|按键|作用|
+|Space|提交输入的字词|
+|Shift_L|当没有按其它键进行输入的时候是中英文切换，在输入中的时候是把第一个候选词提交到预编辑词组中|
+|Shift_R|拼音模式和一般模式的切换|
+|Shift_L/Shift_R＋[1~5]|在拼音模式下输入拼音的声调，在输入框中可以看到↑1, ↑2, ↑3, ↑4, ↑5这样的声调表示。代表阴平，2表示阳平，3意思是上声，4就是去声了，5则代表轻声|
+|Arrow_Left|在预编辑词组中把光标向左移动一个字|
+|Arrow_Right|在预编辑词组中把光标向右移动一个字|
+|Backspace|删除最后一个输入的按键或预编辑词组中的最后一个字|
+|Delete|删除预编辑词组光标后的一个字|
+|Ctrl+Arrow_Left|把光标移到预编辑词组的最前部|
+|Ctrl+Arrow_Left|把光标移到预编辑词组的最前部|
+|Ctrl+Backspace|删除光标前部的预编辑词组|
+|Ctrl+Delete|删除光标后部的预编辑词组|
+|Esc|重置输入法|
+|[1~9]|选择并提交相应的字词|
+|Ctrl+[1~9]|选择相应的字词到预编辑词组中|
+|Alt+[1~9]|删除相应位置的用户自定义词组|
+|Page_Up/Page_Down|上一页或下一页的候选字词|
+|-/+|当没有作为输入键的时候作用和Page_UP/Page_Down相同|
+|Ctrl+,|激活或关闭单字模式|
+|Ctrl+.|切换全角/半角标点|
+|Ctrl+/|激活或关闭直接上屏模式|
+|Ctrl+;|中文输入时切换不同的字符范围，如GBK，GB18030等|
 
-=English=
-== Introduction ==
-IBus-Table is the IM Engine framework for table-based input methods, such as ZhengMa, WuBi, ErBi, CangJie and so on.  The aim of IBus-Table is to make the users of table-based input methods can enjoy the typing on Linux environment.  Definitly, it is far from perfect, so if you have any wish or any suggestion, please file a issue on [http://code.google.com/p/ibus/issues issue_list]or send me an email <acevery@gmail.com>, I would be very please to hear from you :)
+# English #
+## Introduction ##
+IBus-Table is the IM Engine framework for table-based input methods, such as ZhengMa, WuBi, ErBi, CangJie and so on.  The aim of IBus-Table is to make the users of table-based input methods can enjoy the typing on Linux environment.  Definitly, it is far from perfect, so if you have any wish or any suggestion, please file a issue on [issue list](http://code.google.com/p/ibus/issues) or send me an email <acevery@gmail.com>, I would be very please to hear from you :)
 
-== Key Bindings ==
+## Key Bindings ##
     Notice: Ctrl is "Control Key", Shift_L is the left "Shift Key", Shift_R is the right "Shift Key", Alt is the "Alt Key", Arrow_Left is the "Arrow Key" point to left, Arrow_Right is the "Arrow Key" point to right, similarly as  Arrow_Up and Arrow_Down.  Cursor is the one in preedit string.  [Num1~Num9] means one key in Num1, Num2, Num3, ... , Num9.
 
-||Space||commit inputted string||
-||Shift_L||when no key inputted: shift the input mode between English and Table mode. during input: commit the first candidate into preedit string||
-||Shift_R||shift between PinYin mode and Normal mode under Table mode||
-||Shift_L/Shift_R||+ [1~5] input tunes under PinYin mode. the tunes display in aux string area as ↑1, ↑2, ↑3, ↑4, ↑5.  1 is YinPin, 2 is YangPin, 3 is ShangSheng, 4 is QuSheng, 5 is QingSheng||
-||Arrow_Left||move cursor one character left in preedit string||
-||Arrow_Right||move cursor one character right in preedit string||
-||Backspace||remove the last input key or last character in preeidt string||
-||Delete||remove one character after the cursor in preedit string||
-||Ctrl+Arrow_Lelf||move the cursor to the front of preedit string||
-||Ctrl+Arrow_Right||move the cursor to the end of preedit string||
-||Ctrl+Backspace||delete from cursor to the front of preedit string||
-||Ctrl+Delete||delete from cursor to the end of preedit string||
-||Arrow_Down||mext candidate||
-||Arrow_Up||previous candidate||
-||Esc||reset the input method||
-||Num1~Num9||select the correspondent candidate and commit inputted string||
-||Ctrl+[Num1~Num9]||select the correspondent candidate and commit it into preedit string||
-||Alt+[Num1~Num9]||remove the correspondent user-defined phrase||
-||Page_Up/Page_Down||page up/down the lookup table of candidates||
-||-/+||when not been used as valid input keys, the same as Page_Up and Page_Down||
-||Ctrl+,||open/close Single Character Mode, only show single character not phrases||
-||Ctrl+.||shift between full/half punctuation||
-||Ctrl+/||shift between direct/normal commit mode||
-||Ctrl+;||shift between different SubCharset in Chinese||
+|     |                      |
+| --- | -------------------- |
+|Space|commit inputted string|
+|Shift_L|when no key inputted: shift the input mode between English and Table mode. during input: commit the first candidate into preedit string|
+|Shift_R|shift between PinYin mode and Normal mode under Table mode|
+|Shift_L/Shift_R|+ [1~5] input tunes under PinYin mode. the tunes display in aux string area as ↑1, ↑2, ↑3, ↑4, ↑5.  1 is YinPin, 2 is YangPin, 3 is ShangSheng, 4 is QuSheng, 5 is QingSheng|
+|Arrow_Left|move cursor one character left in preedit string|
+|Arrow_Right|move cursor one character right in preedit string|
+|Backspace|remove the last input key or last character in preeidt string|
+|Delete|remove one character after the cursor in preedit string|
+|Ctrl+Arrow_Lelf|move the cursor to the front of preedit string|
+|Ctrl+Arrow_Right|move the cursor to the end of preedit string|
+|Ctrl+Backspace|delete from cursor to the front of preedit string|
+|Ctrl+Delete|delete from cursor to the end of preedit string|
+|Arrow_Down|mext candidate|
+|Arrow_Up|previous candidate|
+|Esc|reset the input method|
+|Num1~Num9|select the correspondent candidate and commit inputted string|
+|Ctrl+[Num1~Num9]|select the correspondent candidate and commit it into preedit string|
+|Alt+[Num1~Num9]|remove the correspondent user-defined phrase|
+|Page_Up/Page_Down|page up/down the lookup table of candidates|
+|-/+|when not been used as valid input keys, the same as Page_Up and Page_Down|
+|Ctrl+,|open/close Single Character Mode, only show single character not phrases|
+|Ctrl+.|shift between full/half punctuation|
+|Ctrl+/|shift between direct/normal commit mode|
+|Ctrl+;|shift between different SubCharset in Chinese|

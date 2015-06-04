@@ -1,26 +1,26 @@
-#summary Design for IBus Registry
-#labels Phase-Implementation
-#sidebar SideNavi
+Design for IBus Registry
 
-= What is the registry? =
+Phase-Implementation
+
+# What is the registry? #
 
 The registry contains information of all installed components of ibus. When ibus boots up, it will load the registry, and use the registry to loading components. 
 
-= What is the component in ibus? =
+# What is the component in ibus? #
 The component is a executable program. It may provides services for ibus 
 
-= How many kinds of services for ibus? =
-== User Interface service ==
+# How many kinds of services for ibus? #
+## User Interface service #
 It provides UI service in ibus. Other input engine can use it to show properties, preedit text, auxiliary text, lookup table, and etc.
 
-== Configure service ==
+## Configure service ##
 It provides configure service in ibus. Other components may store, load and listen on some configure items via it. 
 
-== Input Method Engine service ==
+## Input Method Engine service ##
 It provides basic input method logic, processes users input, produces output. Like PinYin input method.
 
-= Booting steps =
- # Executes ibus-daemon.
- # Executes ibus registry program.
- # Loads panel, configure services.
- # Loads input method services.
+# Booting steps #
+1. Executes ibus-daemon.
+1. Executes ibus registry program.
+1. Loads panel, configure services.
+1. Loads input method services.

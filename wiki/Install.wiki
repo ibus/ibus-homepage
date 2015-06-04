@@ -1,105 +1,104 @@
-#summary Installation related topics, including building and testing.
-#labels Featured,Phase-Requirements
-#sidebar SideNavi
+Installation related topics, including building and testing.
 
-<wiki:toc max_depth="2" />
-= Package Dependencies = 
-== ibus itself == 
- * python >= 2.5
- * dbus-glib >= 0.74
- * dbus-python >= 0.83.0
- * notify-python
- * iso-codes
+Featured,Phase-Requirements
 
-== ibus-qt ==
- * cmake
- * qt >= 4.5
+# Package Dependencies #
+## ibus itself ##
+* python >= 2.5
+* dbus-glib >= 0.74
+* dbus-python >= 0.83.0
+* notify-python
+* iso-codes
 
-== Individual Input Method Dependencies == 
-=== ibus-anthy ===
- * anthy  
+## ibus-qt ##
+* cmake
+* qt >= 4.5
 
-=== ibus-chewing  ===
- * Build dependencies:
-   * CMake >= 2.4
-   * gob2
-   * libchewing >= 0.3.2
-   * GConf2
- * Run dependencies:
-   * libchewing >= 0.3.2
-   * GConf2
+## Individual Input Method Dependencies ##
+### ibus-anthy ###
+* anthy  
 
-=== ibus-hangul ===
- * libhangul
+### ibus-chewing  ###
+* Build dependencies:
+  * CMake >= 2.4
+  * gob2
+  * libchewing >= 0.3.2
+  * GConf2
+* Run dependencies:
+  * libchewing >= 0.3.2
+  * GConf2
 
-=== ibus-pinyin & demo engine ===
- * python-enchant
- * hunspell-en
+### ibus-hangul ###
+* libhangul
 
-= Build & Install IBus =
-== Obtain source code ==
-IBus source code can either be download from [https://github.com/ibus/ibus/releases IBus download page] (If you use ibus for the first time, the download page is more stable than git.)
-{{{
+### ibus-pinyin & demo engine ###
+* python-enchant
+* hunspell-en
+
+# Build & Install IBus #
+## Obtain source code ##
+IBus source code can either be download from [IBus download page](https://github.com/ibus/ibus/releases) (If you use ibus for the first time, the download page is more stable than git.)
+```
  $ zcat ibus-xx.tar.gz | tar xfv -
  $ cd ibus-xx
-}}}
-   * The 'xx' is a version number.
+```
+* The 'xx' is a version number.
 or obtained from git with following commands:
-{{{
+```
  $ git clone git://github.com/ibus/ibus.git ibus
  $ cd ibus
-}}}
-   * 'git clone --help' shows the usage.
+```
+* `git clone --help` shows the usage.
 
-== Build and Install ==
+## Build and Install ##
 After source code is extracted from tarball or git, use following command to build and install:
-{{{
+```
  $ ./autogen.sh --prefix='/usr' --sysconfdir='/etc' --libdir='/usr/lib' --enable-gtk-doc
  $ make
  $ sudo make install
-}}}
-*(Change the paths _'/usr'_, _'/etc'_, _'/usr/lib'_ according to your system configuration.)*
+```
+***(Change the paths _'/usr'_, _'/etc'_, _'/usr/lib'_ according to your system configuration.)***
 
-== Register IBus as a Gtk immodule ==
-=== GTK2 For i386 ===
-{{{
+## Register IBus as a Gtk immodule ##
+### GTK2 For i386 ###
+```
  $ sudo update-gtk-immodules i386-redhat-linux-gnu
-}}}
+```
 or
-{{{
+```
  $ sudo gtk-query-immodules-2.0-32 /usr/lib/gtk-2.0/2.10.0/immodules/im-ibus.so >> /etc/gtk-2.0/i386-redhat-linux-gnu/gtk.immodules
-}}}
-=== GTK2 For x86_64 ===
-{{{
+```
+### GTK2 For x86_64 ###
+```
  $ sudo update-gtk-immodules x86_64-redhat-linux-gnu
-}}}
+```
 or
-{{{
+```
  $ sudo gtk-query-immodules-2.0-64 /usr/lib/gtk-2.0/2.10.0/immodules/im-ibus.so >> /etc/gtk-2.0/x86_64-redhat-linux-gnu/gtk.immodules
-}}}
-=== GTK3 For i386 ===
-{{{
+```
+### GTK3 For i386 ###
+```
  $ ls /usr/lib/gtk-3.0/3.0.0/immodules/im-ibus.so
 /usr/lib/gtk-3.0/3.0.0/immodules/im-ibus.so
  $ sudo gtk-query-immodules-3.0-32 --update-cache
  $ grep ibus /usr/lib/gtk-3.0/3.0.0/immodules.cache
 "/usr/lib/gtk-3.0/3.0.0/immodules/im-ibus.so" 
 "ibus" "IBus (Intelligent Input Bus)" "ibus" "" "ja:ko:zh:*" 
-}}}
-=== GTK3 For x86_64 ===
-{{{
+```
+### GTK3 For x86_64 ###
+```
  $ ls /usr/lib*/gtk-3.0/3.0.0/immodules/im-ibus.so
 /usr/lib64/gtk-3.0/3.0.0/immodules/im-ibus.so
  $ sudo gtk-query-immodules-3.0-64 --update-cache
  $ grep ibus /usr/lib*/gtk-3.0/3.0.0/immodules.cache
 "/usr/lib64/gtk-3.0/3.0.0/immodules/im-ibus.so" 
 "ibus" "IBus (Intelligent Input Bus)" "ibus" "" "ja:ko:zh:*" 
-}}}
+```
 
-*(Replace the string _i386-redhat-linux-gnu_ or path _/usr/lib/gtk-2.0/2.10.0/immodules/im-ibus.so_ with the setting that matches your system.)*
+***(Replace the string _i386-redhat-linux-gnu_ or path _/usr/lib/gtk-2.0/2.10.0/immodules/im-ibus.so_ with the setting that matches your system.)***
 
-== Update icon caches ==
-{{{
+## Update icon caches ##
+```
  $ ls /usr/share/icons/*/*/*/ibus*
 /usr/share/icons/hicolor/16x16/apps/ibus-keyboard.png
 /usr/share/icons/hicolor/22x22/apps/ibus-keyboard.png
@@ -108,191 +107,191 @@ or
 /usr/share/icons/hicolor/48x48/apps/ibus-keyboard.png
 /usr/share/icons/hicolor/scalable/apps/ibus-keyboard.svg
  $ sudo gtk-update-icon-cache /usr/share/icons/hicolor
-}}}
+```
 
-== Install dconf cache ==
-{{{
+## Install dconf cache ##
+```
  $ ls /etc/dconf/db/ibus.d/
 00-upstream-settings
  $ sudo dconf update
  $ ls /etc/dconf/db/ibus
-}}}
+```
 
-== Uninstall dconf cache ==
- # 'dconf update' sometimes does not update the db...
-{{{
+## Uninstall dconf cache ##
+ # `dconf update` sometimes does not update the db...
+```
  $ rm /etc/dconf/db/ibus
-}}}
+```
 
-== Install gsettings schemas file ==
-{{{
+## Install gsettings schemas file ##
+```
  $ ls /usr/share/glib-2.0/schemas/org.freedesktop.ibus.gschema.xml
 /usr/share/glib-2.0/schemas/org.freedesktop.ibus.gschema.xml
  $ glib-compile-schemas /usr/share/glib-2.0/schemas
-}}}
+```
 
-= Build & Install IBus components =
-== Build & Install IBus Qt input method plugin ==
- # Download ibus-qt source from [https://github.com/ibus/ibus-qt/releases IBus download page] or Use git clone git://github.com/ibus/ibus-qt.git ibus-qt
-{{{
+# Build & Install IBus components #
+## Build & Install IBus Qt input method plugin ##
+ # Download ibus-qt source from [IBus download page](https://github.com/ibus/ibus-qt/releases) or Use git clone git://github.com/ibus/ibus-qt.git ibus-qt
+```
  $ zcat ibus-qt-xx.tar.gz | tar xfv -
  $ cd ibus-qt
  $ cmake -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Debug
  $ make
  $ sudo make install
-}}}
-   * The 'xx' is a version number.
+```
+* The 'xx' is a version number.
 
-== Build & Install PinYin engine ==
- # Download ibus-pinyin source from [http://code.google.com/p/ibus/downloads/list IBus download page] or Use git clone git://github.com/ibus/ibus-pinyin.git ibus-pinyin
-{{{
+## Build & Install PinYin engine ##
+ # Download ibus-pinyin source from [IBus download page](http://code.google.com/p/ibus/downloads/list) or Use git clone git://github.com/ibus/ibus-pinyin.git ibus-pinyin
+```
  $ zcat ibus-pinyin-xx.tar.gz | tar xfv -
  $ cd ibus-pinyin
  $ ./autogen.sh --prefix=/usr
  $ make
  $ sudo make install
-}}}
-   * The 'xx' is a version number.
+```
+* The 'xx' is a version number.
 
-== Build & Install Anthy engine ==
- # Download anthy source from [http://sourceforge.jp/projects/anthy/ Anthy Web]
-{{{
+## Build & Install Anthy engine ##
+ # Download anthy source from [Anthy Web](http://sourceforge.jp/projects/anthy/)
+```
  $ zcat anthy-xx.tar.gz | tar xfv -
  $ ./configure --prefix=/usr
  $ make
  $ sudo make install
-}}}
-   * The 'xx' is a version number.
- # Download kasumi source from [http://en.sourceforge.jp/projects/kasumi/ Kasumi Web] and install it (kasumi is not required but probably useful for you.)
- # Download ibus-anthy source from [https://github.com/ibus/ibus-anthy/releases IBus download page] or Use git clone git://github.com/fujiwarat/ibus-anthy.git ibus-anthy
-{{{
+```
+* The 'xx' is a version number.
+ # Download kasumi source from [Kasumi Web](http://en.sourceforge.jp/projects/kasumi/) and install it (kasumi is not required but probably useful for you.)
+ # Download ibus-anthy source from [IBus download page](https://github.com/ibus/ibus-anthy/releases) or Use git clone git://github.com/fujiwarat/ibus-anthy.git ibus-anthy
+```
  $ zcat ibus-anthy-xx.tar.gz | tar xfv -
  $ cd ibus-anthy
  $ ./autogen.sh --prefix=/usr
  $ make
  $ sudo make install
-}}}
-   * The 'xx' is a version number.
+```
+* The 'xx' is a version number.
 
-== Build & Install Chewing engine ==
- # Download ibus-chewing source from [http://code.google.com/p/ibus/downloads/list IBus download page] or Use git clone git://github.com/definite/ibus-chewing.git ibus-chewing
+## Build & Install Chewing engine ##
+ # Download ibus-chewing source from [IBus download page](http://code.google.com/p/ibus/downloads/list) or Use git clone git://github.com/definite/ibus-chewing.git ibus-chewing
  # Make ibus-chewing
-   {{{
+```
 zcat ibus-chewing-xx.tar.gz | tar xfv -
 cd ibus-chewing
 cmake . -DCMAKE_INSTALL_PREFIX='/usr' -DLIBEXEC_DIR='/usr/libexec'
 make
-   }}}
-   * The 'xx' is a version number.
+```
+* The 'xx' is a version number.
  # If you have previous version installed, then need to:
-   {{{
+```
 make uninstall_schemas
-   }}}
+```
  # Install and register schemas
-   {{{
+```
 sudo make install
 make install_schemas
-   }}}
+```
  # Use iBus UI or run `ibus-setup` to add ibus-chewing.
  # Restart iBus and Enjoy!
  * To see other available build targets, use:
-   {{{
+```
 make help
-   }}}
+```
 
-== Build & Install Hangul engine ==
- # Download ibus-hangul source from [http://code.google.com/p/ibus/downloads/list IBus download page] or Use git clone git://github.com/phuang/ibus-hangul.git ibus-hangul
-{{{
+## Build & Install Hangul engine ##
+ # Download ibus-hangul source from [IBus download page](http://code.google.com/p/ibus/downloads/list) or Use git clone git://github.com/phuang/ibus-hangul.git ibus-hangul
+```
  $ zcat ibus-hangul-xx.tar.gz | tar xfv -
  $ cd ibus-hangul
  $ ./autogen.sh --prefix=/usr
  $ make
  $ sudo make install
-}}}
-   * The 'xx' is a version number.
+```
+* The 'xx' is a version number.
 
-== Build & Install M17n engine ==
- # Download ibus-m17n source from [http://code.google.com/p/ibus/downloads/list IBus download page] or Use git clone git://github.com/ibus/ibus-m17n.git ibus-m17n
-{{{
+## Build & Install M17n engine ##
+ # Download ibus-m17n source from [IBus download page](http://code.google.com/p/ibus/downloads/list) or Use git clone git://github.com/ibus/ibus-m17n.git ibus-m17n
+```
  $ zcat ibus-m17n-xx.tar.gz | tar xfv -
  $ cd ibus-m17n
  $ ./autogen.sh --prefix=/usr
  $ make
  $ sudo make install
-}}}
-   * The 'xx' is a version number.
+```
+* The 'xx' is a version number.
 
-= RPM =
+# RPM #
 IBus itself and most of the components support source RPM building:
-{{{
+```
  $ make srpm
-}}}
+```
 and RPM building:
-{{{
+```
  $ make rpm
-}}}
+```
 
 The built RPMs are usually in dir `${ARCH}` or `RPMS/${ARCH}`.
 Following RPMs will be built by default:
- # ibus
- # ibus-libs
- # ibus-gtk
- # ibus-devel
- # ibus-debuginfo
+* ibus
+* ibus-libs
+* ibus-gtk
+* ibus-devel
+* ibus-debuginfo
 
 End users only need first three, only components and input method developer need the rest.
 RPMs can be install by either:
-{{{
+```
  $ sudo rpm -hiv <rpm file list>
-}}}
+```
 or with yum:
-{{{
+```
  $ sudo yum localinstall <rpm file list>
-}}}
+```
 or with PackageKit:
-{{{
+```
  $ sudo pkcon install <rpm file list>
-}}}
+```
 or any other GUI package manager that supports RPM.
 
-= Run iBus =
+# Run iBus #
 Run `ibus-daemon` to start ibus daemon with either way:
-   * Distribution tool likes im-chooser, im-switch
-   * Add a new /etc/xdg/autostart/ibus.desktop to invoke 'ibus-daemon --xim'
-   * Manual
-{{{
+* Distribution tool likes im-chooser, im-switch
+* Add a new /etc/xdg/autostart/ibus.desktop to invoke `ibus-daemon --xim`
+* Manual
+```
  $ pkill -9 ibus
  $ ps -ef | grep ibus
  $ /usr/bin/ibus-daemon --xim &
-}}}
+```
 
 After ibus-daemin is invoked, Run `ibus-setup` to set the preference, enable input methods, also start ibus daemon.
 
 e.g.
-{{{
+```
  $ ps -ef | grep ibus
 foo 15735 15518  0 11:30 pts/3    00:00:17 /usr/bin/ibus-daemon --xim
 foo 20037 15735  0 12:58 pts/3    00:00:00 /usr/libexec/ibus-gconf
 foo 20039 15735  0 12:58 pts/3    00:00:06 python /usr/share/ibus/ui/gtk/main.py
 foo 20041     1  0 12:58 pts/3    00:00:00 /usr/libexec/ibus-x11 --kill-daemon
 foo 20042 15735  0 12:58 pts/3    00:00:01 python /usr/share/ibus-anthy/engine/main.py --ibus
-}}}
+```
 
-= Run gnome, kde or old X applications =
+# Run gnome, kde or old X applications #
 Set following environment varible for Gtk:
-{{{
+```
  $ GTK_IM_MODULE=ibus 
-}}}
+```
 For KDE:
-{{{
+```
  $ QT_IM_MODULE=ibus
-}}}
+```
 and other X applications
-{{{
+```
  $ XMODIFIERS="@im=ibus"
-}}}
+```
 e.g.
-{{{
+```
  $ env GTK_IM_MODULE=ibus gedit
-}}}
+```
 To enable input method, Type Ctrl + Space.

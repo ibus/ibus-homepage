@@ -1,80 +1,82 @@
-#summary Read me at first
-#labels Featured
-= What is ibus =
+Read me at first
+
+Featured
+
+# What is ibus #
 IBus means Intelligent Input Bus. It is an open source input framework for Linux/Unix OS.
 
-= Install binary packages =
-== Fedora 9 and later ==
-{{{
+# Install binary packages #
+## Fedora 9 and later ##
+```
  $ yum install ibus\*
-}}}
+```
 
-== Ubuntu ==
-{{{
+## Ubuntu ##
+```
  $ sudo apt-get install ibus-gtk ibus-qt4 ibus-pinyin
  $ im-switch -s ibus
  Logout and re-login
-}}}
+```
 
-== Gentoo ==
-===ibus, ibus-pinyin, ibus-table, ibus-anthy, ibus-chewing, ibus-hangul, and ibus-m17n have been added into portage,  so you can directly emerge them if you have up-to-date portage :) ===
- * For example, when you want ibus-pinyin, 
-{{{
+## Gentoo ##
+### ibus, ibus-pinyin, ibus-table, ibus-anthy, ibus-chewing, ibus-hangul, and ibus-m17n have been added into portage,  so you can directly emerge them if you have up-to-date portage :) ###
+* For example, when you want ibus-pinyin, 
+```
  $ emerge -av ibus-pinyin
-}}}
- * When you want ibus-table,
-{{{
+```
+* When you want ibus-table,
+```
  $ emerge -av ibus-table
-}}}
- * When you want ibus-anthy,
-{{{
+```
+* When you want ibus-anthy,
+```
  $ emerge -av ibus-anthy
-}}}
+```
 
- * If you want use git ebuilds, please add gentoo-china overlay, which includes 9999 ebuild for ibus, ibus-pinyin, ibus-table, ibus-anthy, and ibus-chewing.
-{{{
+* If you want use git ebuilds, please add gentoo-china overlay, which includes 9999 ebuild for ibus, ibus-pinyin, ibus-table, ibus-anthy, and ibus-chewing.
+```
  $ emerge -av layman && layman -a gentoo-china
-}}}
- * To use the 9999 ebuild you need to accept the ** keyword for specific packages. For instance, if we want to emerge the ibus-9999, we need to accept the ** for ibus, then:
-{{{
+```
+* To use the 9999 ebuild you need to accept the ** keyword for specific packages. For instance, if we want to emerge the ibus-9999, we need to accept the ** for ibus, then:
+```
  $ echo "app-i18n/ibus **" >> /etc/portage/package.keywords
  $ emerge -av ibus
-}}}
+```
  * For more detail about the keywords masking, please refer to the handbook of gentoo.
 
-== Arch Linux ==
- * Get PKGBUILD from below URLs:
-  # ibus http://aur.archlinux.org/packages.php?ID=20064
-  # ibus-pinyin http://aur.archlinux.org/packages.php?ID=20528
-  # ibus-table http://aur.archlinux.org/packages.php?ID=20529 
-  # ibus-chewing http://aur.archlinux.org/packages.php?ID=20567
-  # ibus-anthy http://aur.archlinux.org/packages.php?ID=20566
+## Arch Linux ##
+* Get PKGBUILD from below URLs:
+  * ibus http://aur.archlinux.org/packages.php?ID=20064
+  * ibus-pinyin http://aur.archlinux.org/packages.php?ID=20528
+  * ibus-table http://aur.archlinux.org/packages.php?ID=20529 
+  * ibus-chewing http://aur.archlinux.org/packages.php?ID=20567
+  * ibus-anthy http://aur.archlinux.org/packages.php?ID=20566
 
- * Get git PKGBUILD from below URLs:
-  # ibus-git http://aur.archlinux.org/packages.php?ID=19534
-  # ibus-pinyin-git http://aur.archlinux.org/packages.php?ID=19481
-  # ibus-table-git http://aur.archlinux.org/packages.php?ID=19483 
-  # ibus-table-wubi-git http://aur.archlinux.org/packages.php?ID=22122
-  # ibus-extra-phrases-git http://aur.archlinux.org/packages.php?ID=22121
+* Get git PKGBUILD from below URLs:
+  * ibus-git http://aur.archlinux.org/packages.php?ID=19534
+  * ibus-pinyin-git http://aur.archlinux.org/packages.php?ID=19481
+  * ibus-table-git http://aur.archlinux.org/packages.php?ID=19483 
+  * ibus-table-wubi-git http://aur.archlinux.org/packages.php?ID=22122
+  * ibus-extra-phrases-git http://aur.archlinux.org/packages.php?ID=22121
 
-== OpenSUSE ==
- * Please visit http://download.opensuse.org/repositories/home:/swyear
+## OpenSUSE ##
+* Please visit http://download.opensuse.org/repositories/home:/swyear
 
-== Build & Install From Git repository ==
-Please read [Install install guide] for users or [DevGuide developer guide] for developers
+## Build & Install From Git repository ##
+Please read [install guide](Install) for users or [developer guide](DevGuide) for developers
 
-= Test ibus =
-== Run ibus ==
-{{{
+# Test ibus #
+## Run ibus ##
+```
  $ /usr/bin/ibus-daemon --xim &
  $ /usr/bin/ibus-setup
-}}}
-== Run gnome, kde or old X applications ==
-{{{
+```
+## Run gnome, kde or old X applications ##
+```
  # gtk application
  $ GTK_IM_MODULE=ibus gedit
  # kde application
  $ QT_IM_MODULE=ibus kwrite
  # old X application
  $ XMODIFIERS="@im=ibus" xterm
-}}}
+```

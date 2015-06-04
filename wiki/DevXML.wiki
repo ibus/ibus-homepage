@@ -1,10 +1,10 @@
-#summary XML spec for IBus
-#labels Phase-Implementation
-#sidebar SideNavi
+XML spec for IBus
 
-= XML spec for ibus component =
+Phase-Implementation
 
-{{{
+# XML spec for ibus component #
+
+```
 <?xml version="1.0" encoding="utf-8"?>
 <!-- filename: pinyin.xml -->
 <component>
@@ -37,4 +37,4 @@
         </engine>
     </engines>
 </component>
-}}}
+```

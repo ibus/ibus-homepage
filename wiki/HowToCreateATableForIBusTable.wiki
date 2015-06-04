@@ -1,36 +1,36 @@
-#summary How to Create a table for ibus-table
-#labels Phase-Deploy,Featured
-#sidebar SideNavi
+How to Create a table for ibus-table
 
-= Steps =
+Phase-Deploy,Featured
 
- # Assume the _DATADIR_  is _/usr/share_
- # Copy ${DATADIR}/ibus-table/tables/template.txt for the template to begin with. Assume it is  _your-im-table.txt_
- # Make an icon for your im, assume it is _your-im-table.svg_.
- # Edit the your-im-table.txt to suit your need.
- # Fill the actual table content between *BEGIN_TABlE* and *END_TABlE*.
+# Steps #
+
+1. Assume the __DATADIR__  is __/usr/share__
+1. Copy ${DATADIR}/ibus-table/tables/template.txt for the template to begin with. Assume it is  __your-im-table.txt__
+1. Make an icon for your im, assume it is __your-im-table.svg__.
+1. Edit the your-im-table.txt to suit your need.
+1. Fill the actual table content between *BEGIN_TABlE* and *END_TABlE*.
   # The 1st field is "Input Key": the key sequence to produce the word/phrase
   # The 2nd field is "Phrase": Word/phrase to be produced.
   # The 3rd field is "Frequency": The usage frequency of that phrase. Phrases with more frequency will be in front of candidate list.
- # Install _ibus-table_ if you have not.
- # Run 
-{{{
-ibus-table-createdb -n ${DATADIR}/ibus-table/tables/your-im-table.db -s your-im.table.txt
-cp your-im-table.svg ${DATADIR}/ibus-table/icons/
-}}}
- # Restart ibus-daemon by
-{{{
-ibus-daemon -drx
-}}}
- # Enjoy your input method. :-)
+1. Install __ibus-table__ if you have not.
+1. Run <pre>
+    ```
+    ibus-table-createdb -n ${DATADIR}/ibus-table/tables/your-im-table.db -s your-im.table.txt
+    cp your-im-table.svg ${DATADIR}/ibus-table/icons/
+    ```</pre>
+1. Restart ibus-daemon by<pre>
+    ```
+    ibus-daemon -drx
+    ```</pre>
+1. Enjoy your input method. :-)
 
-= For input method developers =
+# For input method developers #
 It is recommended to split database building and index creating,
 as it makes distro packagers' life easier.
 
-Use *-o* option of _ibus-table-create_ to build database without creating index;
-use *-i* option of _ibus-table-create_ to create index without building database.
+Use *-o* option of __ibus-table-create__ to build database without creating index;
+use *-i* option of __ibus-table-create__ to create index without building database.
 
-= For packagers =
-Install the database file which is built by _ibus-table-create_ *-o*,
-and create index with _ibus-table-create_ *-i* in your post-install script script.
+# For packagers #
+Install the database file which is built by __ibus-table-create__ *-o*,
+and create index with __ibus-table-create__ *-i* in your post-install script script.

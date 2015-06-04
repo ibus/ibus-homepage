@@ -1,0 +1,21 @@
+# How to file the bug report #
+Please file ibus bug report by component; ibus, ibus-qt, ibus-anthy, ibus-pinyin, etc.
+
+If you don't know which component you should file, you can file your problem to [ibus](https://github.com/ibus/ibus/issues) core and ibus maintainers will evaluate the isssues and ask the reporter or the component maintainers to file the problem to the right component.
+
+The old issues in [https://code.google.com/p/ibus/issues/list](https://code.google.com/p/ibus/issues/list) are moved to [https://github.com/ibus/ibus/issues](https://github.com/ibus/ibus/issues) at the moment. But github.com issues can be looked by the github users only. To notify a github user, you can write "@username" on the github issue report. Roughly code.google.com issue ID + about 20, 21, 22 == github.com issue ID.
+
+## Bug links for components ##
+* [ibus core (ibus-daemon, ibus-ui-gtk3, libibus.so, im-ibus.so for gtk2 and gtk3)](https://github.com/ibus/ibus/issues)
+* [ibus-qt4](https://github.com/ibus/ibus-qt/issues)
+* [ibus-pinyin](https://github.com/ibus/ibus-qt/issues)
+* [ibus-table](https://github.com/mike-fabian/ibus-table/issues)
+* [ibus-table-others](https://github.com/mike-fabian/ibus-table-others/issues)
+* [ibus-table-chinese](https://github.com/mike-fabian/ibus-table-chinese/issues)
+* [ibus-chewing](https://github.com/definite/ibus-chewing/issues)
+* [ibus-anthy](https://github.com/ibus/ibus-anthy/issues)
+* [ibus-hangul](https://github.com/choehwanjin/ibus-hangul/issues)
+* [ibus-m17n](https://github.com/ibus/ibus-m17n/issues)
+* [ibus-tmpl](https://github.com/ibus/ibus/issues)
+* [ibus-libpinyin](https://github.com/libpinyin/ibus-libpinyin/issues)
+* [ibus-kkc](https://github.com/ueno/ibus-kkc/issues)

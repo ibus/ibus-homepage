@@ -1,50 +1,51 @@
-#summary Source repository page
-#labels Phase-Implementation
-#sidebar SideNavi
+Source repository page
 
-= Source repository =
-You can check out the latest unstable source code of IBus using git. Or browse source code via [http://github.com/ibus/ web interface] .
+Phase-Implementation
 
-== IBus Core ==
-{{{
+# Source repository #
+You can check out the latest unstable source code of IBus using git. Or browse source code via [web interface](https://github.com/ibus/ibus/releases).
+
+## IBus Core ##
+```
  $ git clone git://github.com/ibus/ibus.git ibus
-}}}
+```
 
-== IBus Qt4 ==
-{{{
+## IBus Qt4 ##
+```
  $ git clone git://github.com/ibus/ibus-qt.git ibus-qt
-}}}
+```
 
-== Chinese !PinYin engine ==
-{{{
+## Chinese PinYin engine ##
+```
  $ git clone git://github.com/ibus/ibus-pinyin.git ibus-pinyin
-}}}
+```
 
-== General Table engine ==
-{{{
+## General Table engine ##
+```
  $ git clone git://github.com/kaio/ibus-table.git ibus-table
-}}}
-== Chinese Chewing engine ==
-{{{
+```
+
+## Chinese Chewing engine ##
+```
  $ git clone git://github.com/definite/ibus-chewing.git ibus-chewing
-}}}
+```
 
-== Japanese Anthy engine ==
-{{{
+## Japanese Anthy engine ##
+```
  $ git clone git://github.com/ibus/ibus-anthy.git ibus-anthy
-}}}
+```
 
-== Korean Hangul engine ==
-{{{
+## Korean Hangul engine ##
+```
  $ git clone git://github.com/choehwanjin/ibus-hangul.git ibus-hangul
-}}}
+```
 
-== M17N engine == 
-{{{
+## M17N engine ##
+```
  $ git clone git://github.com/ibus/ibus-m17n.git ibus-m17n
-}}}
+```
 
-== Template engine == 
-{{{
+## Template engine ##
+```
  $ git clone  git://github.com/ibus/ibus-tmpl.git ibus-tmpl
-}}}
+```

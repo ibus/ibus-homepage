@@ -1,21 +1,24 @@
- * [Install]
-  * [CentOS]
-  * [Gentoo]
-  * [Ubuntu]
-  * [Debian]
- * [FAQ]
-  * [IBusStartUpTroubleShooting]
-  * [FAQCN FAQ中文版]
- * [PinYinUserGuideCN ibus-pinyin]
- * [TableReadme ibus-table]
-  * [IbusTableDevGuide]
-  * [LaTeX]
-  * [HowToCreateATableForIBusTable]
-  * [ChineseTableLicenseAuditing]
- * [ChewingUserGuide ibus-chewing]
- * [Develop]
-  * [Sources]
-  * [DevGuide]
-  * [DevDesignForIBusRegistry]
-  * [DevXML]
-  * [http://ibus.googlecode.com/svn/docs/ibus-1.5/index.html IBus API references]
+* [Back to the top](Home)
+* [ReadMe](ReadMe)
+* [Downloads](Downloads)
+* [Bug report](BugReport)
+* [Install](Install)
+  * [CentOS](CentOS)
+  * [Gentoo](Gentoo)
+  * [Ubuntu](Ubuntu)
+  * [Debian](Debian)
+* [FAQ](FAQ)
+  * [IBusStartUpTroubleShooting](IBusStartUpTroubleShooting)
+  * [FAQ中文版](FAQCN)
+* [ibus-pinyin](PinYinUserGuideCN)
+* [ibus-table](TableReadme)
+  * [LaTeX](LaTeX)
+  * [HowToCreateATableForIBusTable](HowToCreateATableForIBusTable)
+  * [ChineseTableLicenseAuditing](ChineseTableLicenseAuditing)
+* [ibus-chewing](ChewingUserGuide)
+* [Develop](Develop)
+  * [Sources](Sources)
+  * [DevGuide](DevGuide)
+  * [DevDesignForIBusRegistry](DevDesignForIBusRegistry)
+  * [DevXML](DevXML)
+  * [IBus API references](https://raw.githubusercontent.com/ibus/ibus-homepage/master/docs/ibus-1.5/index.html)

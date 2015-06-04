@@ -1,0 +1,66 @@
+# ![](https://raw.githubusercontent.com/ibus/ibus-homepage/master/images/logo.jpg) IBus - Intelligent Input Bus for Linux / Unix OS #
+Welcome to IBus project! It is a next generation input framework.
+
+[![](https://www.openhub.net/images/widget_logos/openhublogo.png "Support ibus by adding it to your stack at Open Hub")](https://www.openhub.net/stack_entries/new?project_id=ibus&ref=sample)
+
+* [Downloads](https://github.com/ibus/ibus/wiki/Downloads)
+* [Bug report](https://github.com/ibus/ibus/wiki/BugReport)
+* Code license: [GNU Lesser GPL](http://www.gnu.org/licenses/lgpl.html)
+
+## Document
+* [IBus 1.5 API References](https://raw.githubusercontent.com/ibus/ibus-homepage/master/docs/ibus-1.5/index.html)
+* [IBus 1.4 API References (Old version)](https://raw.githubusercontent.com/ibus/ibus-homepage/master/docs/ibus-1.4/index.html)
+
+## Quick links
+* [ReadMe](ReadMe)
+* [Frequently Asked Questions - Chinese version](FAQCN)
+* [Get source](https://github.com/ibus/ibus/releases)
+* [IBus on Moblin](http://moblin.org/documentation/input-method-framework/guide-ibus-moblin2)
+* [Array input method](http://code.google.com/p/ibus-array/)
+* [Sun pinyin](http://code.google.com/p/sunpinyin/)
+* [Sogou Pinyin Cloud Client](http://code.google.com/p/ibus-cloud-pinyin/)
+* [Unikey engine](http://code.google.com/p/ibus-unikey/)
+* [Fitx engine](http://code.google.com/p/fitx/)
+* [Mozc engine for Japanese](http://code.google.com/p/mozc/)
+* [Input pad](https://github.com/fujiwarat/input-pad/wiki)
+* [Chewing project home](http://chewing.csie.net/)
+* [M17N project home](http://www.m17n.org/)
+* [SKK input method](http://github.com/ueno/ibus-skk)
+* [Anthy project](http://anthy.sourceforge.jp/)
+* [Hangul project](http://code.google.com/p/libhangul/)
+* [opencc](http://code.google.com/p/opencc/)
+* [ibus-libpinyin](https://github.com/libpinyin)
+
+## IRC
+We have an #ibus channel on irc.freenode.org for developers.
+
+## Screen shots
+![](https://raw.githubusercontent.com/ibus/ibus-homepage/master/images/1.jpg)
+
+![](https://raw.githubusercontent.com/ibus/ibus-homepage/master/images/2.jpg)
+![](https://raw.githubusercontent.com/ibus/ibus-homepage/master/images/3.jpg)
+
+## Links
+### External links
+* [Source code](Sources)
+* [ibus-anthy](http://github.com/fujiwarat/ibus-anthy)
+* [ibus-chewing](http://github.com/definite/ibus-chewing)
+* [ibus-hangul](http://github.com/choehwanjin/ibus-hangul)
+* [mozc](http://code.google.com/p/mozc/)
+* [ibus-sunpinyin](http://code.google.com/p/sunpinyin/)
+* [opencc](http://code.google.com/p/opencc/)
+* [ibus-table](https://github.com/kaio/ibus-table/)
+* [ibus-unikey](http://code.google.com/p/ibus-unikey/)
+* [ibus-tmpl](http://github.com/phuang/ibus-tmpl/tree/master)
+* [ibus-handwrite](http://code.google.com/p/ibus-handwrite/)
+* [ibus-skk](http://github.com/ueno/ibus-skk)
+* [ibus-cloud-pinyin](http://code.google.com/p/ibus-cloud-pinyin/)
+* [ibus-m17n](http://github.com/phuang/ibus-m17n/tree/master)
+* [input pad](http://code.google.com/p/input-pad)
+* [pyzy](https://code.google.com/p/pyzy/)
+* [ibus-pinyin](http://github.com/phuang/ibus-pinyin/tree/master)
+* [ibus-libpinyin](https://github.com/libpinyin)
+
+### Groups
+* [Users' group](http://groups.google.com/group/ibus-user)
+* [Developers' group](http://groups.google.com/group/ibus-devel)

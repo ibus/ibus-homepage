@@ -1,63 +1,64 @@
-#summary IBus start up trouble shooting for various desktop environments (DE) and standalone window managers (WM).
-#labels Phase-Deploy
-#sidebar SideNavi
+IBus start up trouble shooting for various desktop environments (DE) and standalone window managers (WM).
 
-<wiki:toc max_depth="2" />
-=1. Introduction =
+Phase-Deploy
+
+# 1. Introduction #
 Normally IBus startup configuration will be done automatically after IBus installation.
 But if it does not "just work" then this page is for you. Following sections list the possible causes of the problem.
 
-=2. Trouble shooting=
-==2.1 Does the DE or WM support XDG autostart?==
-[http://standards.freedesktop.org/autostart-spec/autostart-spec-latest.html#startup XDG autostart] specifies the how the applications should be started when you start a X session. DE such like GNOME, KDE, LXDE, and XFCE support it. Unfortunately, not all WM support it, if you have one of such WM, you may need to put ibus-daemon in your start up script. 
+# 2. Trouble shooting #
+## 2.1 Does the DE or WM support XDG autostart? ##
+[XDG autostart](http://standards.freedesktop.org/autostart-spec/autostart-spec-latest.html#startup) specifies the how the applications should be started when you start a X session. DE such like GNOME, KDE, LXDE, and XFCE support it. Unfortunately, not all WM support it, if you have one of such WM, you may need to put ibus-daemon in your start up script. 
 
-See [#3._Start_Up_Script Start Up Script] for detail.
+See [Start Up Script](#3._Start_Up_Script) for detail.
 
-==2.2 Does your imsettings, im-chooser, im-switch, or other input framework selecting mechanism work?==
+## 2.2 Does your imsettings, im-chooser, im-switch, or other input framework selecting mechanism work? ##
 Some distribution like Fedora an Ubuntu have this mechanism so users can change their input frameworks (such as SCIM, IBus, OXIM) , without logging out.
 If unfortunately, the mechanism does not get along with your DE or WM, then you might need to disable it.
 
-See [#3._Start_Up_Script Start Up Script] for detail.
+See [Start Up Script](#3._Start_Up_Script) for detail.
 
-=3. Start Up Script=
+# <a name="3._Start_Up_Script"></a>3. Start Up Script#
 *Note:* The following script is designed for Fedora, other system may need to change accordingly.
 
 The following method should work for nearly all DE or WM. However you may need to disable the imsettings and IBus from XDG autostart setting.
 
-==3.1 Disable im-settings and IBus from XDG autostart==
-===3.1.1 KDE4===
+## 3.1 Disable im-settings and IBus from XDG autostart ##
+### 3.1.1 KDE4 ###
 Application->System->System Setting->Advance->Autostart
 Disable im-settings and IBus
 
-===3.1.2 GNOME===
+### 3.1.2 GNOME ###
 System->Preferences->Startup Application->Startup Programs
 Disable im-settings and IBus
 
-===3.1.3 LXDE===
+### 3.1.3 LXDE ###
+```
 # Open an terminal
 # gnome-control-center
 # Startup Application->Startup Programs
 Disable im-settings and IBus
+```
 
-==3.2 Install Autoexec script(optional)==
+## 3.2 Install Autoexec script(optional) ##
 If you want a place to put your autostart scripts for all DE and WM regardless the XDG support or starting from startx/desktop manager, read on, otherwise skip this section.
 
-{{{
+```
 # sudo vi /etc/X11/xinit/xinitrc.d/45-autoexec.sh
-}}}
+```
 
 Whose content is:
-{{{
+```
 #!/bin/bash
 if [ -x "$HOME/.autoexec" ]; then
        . $HOME/.autoexec
-}}}
+```
 
 Now you can put your favorite application in $HOME/.autoexec
 
-==3.3 Content of the startup script==
+## 3.3 Content of the startup script ##
 Add following to your startup script (~/.autoexec, or ~/.Xclient if you start with startx)
-{{{
+```
 # input framework launch
 XIM_PROF=ibus
 ln -sf /etc/X11/xinit/xinput.d/${XIM_PROF}.conf ${HOME}/.xinputrc
@@ -76,10 +77,10 @@ fi
 
 echo "XIM_PROGRAM=${XIM_PROGRAM}"
 ${XIM_PROGRAM} ${XIM_ARGS} &
-}}}
+```
 
 If you do not have `/etc/X11/xinit/xinput.d/ibus.conf` , then use following instead:
-{{{
+```
 # input framework launch
 ibus-daemon --xim -d
-}}}
+```

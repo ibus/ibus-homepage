@@ -1,0 +1,11 @@
+# Source files #
+* [ibus core (ibus-daemon, ibus-ui-gtk3, libibus.so, im-ibus.so for gtk2 and gtk3)](https://github.com/ibus/ibus/releases)
+* [ibus-qt4](https://github.com/ibus/ibus-qt/releases)
+* [ibus-pinyin](https://github.com/ibus/ibus-qt/releases)
+* [ibus-table](https://github.com/kaio/ibus-table/releases)
+* [ibus-chewing](https://github.com/definite/ibus-chewing/releases)
+* [ibus-anthy](https://github.com/ibus/ibus-anthy/releases)
+* [ibus-hangul](https://github.com/choehwanjin/ibus-hangul/releases)
+* [ibus-m17n](https://github.com/ibus/ibus-m17n/releases)
+* [ibus-libpinyin](https://github.com/libpinyin/ibus-libpinyin/releases)
+* [ibus-kkc](https://github.com/ueno/ibus-kkc/releases)

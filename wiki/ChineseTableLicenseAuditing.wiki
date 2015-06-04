@@ -1,8 +1,8 @@
-#summary Chinese input tables license auditing.
-#labels Phase-Design
-#sidebar SideNavi
+Chinese input tables license auditing.
 
-= Introduction =
+Phase-Design
+
+# Introduction #
 Not all of the Chinese input tables are actually free for Linux/BSD to distribute. 
 So of them do, but others may have additional term and conditional attach to them,
 like no commercial use, or have to contact the author for authorization.
@@ -14,29 +14,30 @@ Note: Chinese intellect property office does not reveal the expire date.
 Zhuyin is not included, as without end-key or other state support, it does not work well in ibus-table.
 
 
-||Input method name||Chinese Name||variant||Author||License||Copyright page||Patent Status||Free to pack||SCIM||
-||[http://www.array.com.tw array]||行列||30||廖明德||Free to redistribute||http://www.array.com.tw/BOX/BOX5.htm|| ||Yes||Yes||
-||[http://boshiamy.com/ boshiamy]||||嘸蝦米||劉重次||Propriety||No free redistribution http://boshiamy.com/product_authorize.html||122588, Expired in 2003-11-11||[#Legend Compatible +] ||No||
-||cangjie3||倉頡||3||朱邦復||Free to redistribute||Author lifted the restriction of his patent in 1982||027984, Expired in 1989-12-01||Yes||Yes||
-||[http://www.chinesecj.com/forum/ cangjie5]||倉頡||5||朱邦復/倉頡之友馬來西亞||Free to redistribute||Author lifted the restriction of his patent in 1982||027984, Expired in 1989-12-01||Yes||Yes||
-||cantonese||||廣東拼音 |||||||||| Unknown (Unless its from http://www.html.com.hk/chispace/canton.asp, which prohibit redistribution)||Yes||
-||cantonehk||||廣東拼音香港版||梁敬文 (Kingman Leung)|| GPLv3+ || || || Yes ||Yes||
-||[http://homepage.mac.com/eshen/ez/ easy]||||輕鬆||輕鬆輸入法之家||GPL||http://homepage.mac.com/eshen/ez/ezgpl.html|| ||Yes||Yes||
-||[http://www.dayi.com/ dayi]||||大易||王贊傑||Propriety||Not sure: they do authorize various organizations, which implies permission is required to redistribute|| Not sure||Not in Fedora||No||
-||erbi||二筆||小林子||Edited by xiaolinzi(小林子), Patent holder: Chen Jinsong (陈劲松)||GPLv2+ (According to SCIM, xiaolinzi claim so) ||Unknown||96103706.7:Expired on 2010/03/03; 96103708.3:Expired on 2007/02/28||Yes||Yes||
-||erbi-qs||二筆||小林子-青松||Edited by xiaolinzi(小林子), Patent holder: Chen Jinsong (陈劲松)||GPLv2+(According to SCIM, xiaolinzi claim so)||Unknown||96103706.7:Expired on 2010/03/03; 96103708.3:Expired on 2007/02/28||Yes||Yes||
-||jyutping||||粵語拼音 |||||||||| Not Sure  ||Yes||
-||quick||速成||3,5||||||||||Unknown (Not quite sure we can safely assume its same with Cangjie)||Yes||
-||[http://www.scj2000.com/ scj6]||快速倉頡||6||麥志洪||GPLv3||http://download.scj2000.net/src/COPYING||No||Yes||Yes||
-||stroke5||||筆順五碼||梁敬文 (Kingman Leung)|| GPLv3+ || || || Yes ||Yes||
-||[http://input.foruto.com/wu/index.html wu]||||上海吳語注音||http://input.foruto.com/wu/index.html||GPLv3||http://input.foruto.com/wu/index.html||No||Yes||Yes||
-||[http://www.wangma.com.cn/ wubi (Wang)]||王碼五筆||86||王永民||Propriety, Shareware || A [http://www.wangma.com.cn/Sharing.asp?id=94 list] of organizations that bought Wangma Wubi's patent, which implies Wangma Wubi cannot be redistributed freely. ||CN85100837 (Applicant Date is 1985.04.01, should be expired now) ||[#Legend Compatible +]||No||
-||[http://freeime.xoom.it/ wubi (Jidian)]||極點五筆||86||杜志民||Propriety, Free to download|| http://freeime.xoom.it/|| ||Not sure||Yes||
-||[http://sunhaifeng.net/Villa/default.asp wubi (HaiFeng)]||海峰五筆||86||孫海峰|| BSD || || ||Yes||No||
-||[http://www.fhpi.cn/ xinhua]||||新華||潘英||Need permission for commercial, otherwise free||http://www.fhpi.cn/fiuxkex.htm||CN1142075||Not in Fedora||Yes||
-||[http://yong.uueasy.com yong]||||永碼||dgod||GPLv3|| In yong-lin package from http://u.115.com/folder/f9ed6f6b6b,0 ||No||Yes||Yes||
-||[http://www.china-e.com.cn/main/zhengma/jj.htm zhengma]||||鄭碼||鄭易里/鄭瓏||Propriety||http://www.china-e.com.cn/main/zhengma/jj.htm||CN1043210|| No || No||
-||[http://www.zrm.com.cn/ ziranma]||||自然碼||周志农||Propriety||Not sure: [http://www.zrm.com.cn/download.htm this site] provides downloads for upgrade and "free( as in beer)", but does not reveal whether we can redistribute it||CN1204081||Not sure||Yes||
+| Input<br/>method<br/>name | Chinese Name |variant | Author | License | Copyright page| Patent Status|Free to pack | SCIM |
+| ----------------- | ------------ | ------ | ------ | ------- | ------------- | ------------ | ----------- | ---- |
+|[array](http://www.array.com.tw)|行列|30|廖明德|Free to redistribute|[www.array.com.tw](http://www.array.com.tw/BOX/BOX5.htm)| |Yes|Yes|
+|[boshiamy](http://boshiamy.com/)|嘸蝦米| |劉重次|Propriety|No free redistribution<br />[boshiamy.com](http://boshiamy.com/product_authorize.html)|122588, Expired in 2003-11-11|[Compatible +](#+) |No|
+|cangjie3|倉頡|3|朱邦復|Free to redistribute|Author lifted the restriction of his patent in 1982|027984, Expired in 1989-12-01|Yes|Yes|
+|[cangjie5](http://www.chinesecj.com/forum/)|倉頡|5|朱邦復/倉頡之友馬來西亞|Free to redistribute|Author lifted the restriction of his patent in 1982|027984, Expired in 1989-12-01|Yes|Yes|
+|cantonese|廣東拼音 | | Unknown (Unless its from [www.html.com.hk](http://www.html.com.hk/chispace/canton.asp), which prohibit redistribution) | | | | |Yes|
+|cantonehk|廣東拼音香港版| |梁敬文 (Kingman Leung)| GPLv3+ | | | Yes |Yes|
+|[easy](http://homepage.mac.com/eshen/ez/)|輕鬆| |輕鬆輸入法之家|GPL|[homepage.mac.com](http://homepage.mac.com/eshen/ez/ezgpl.html)| |Yes|Yes|
+|[dayi](http://www.dayi.com/)|大易| |王贊傑|Propriety|Not sure: they do authorize various organizations, which implies permission is required to redistribute| Not sure|Not in Fedora|No|
+|erbi|二筆|小林子|Edited by xiaolinzi(小林子), Patent holder: Chen Jinsong (陈劲松)|GPLv2+ (According to SCIM, xiaolinzi claim so) |Unknown|96103706.7:Expired on 2010/03/03; 96103708.3:Expired on 2007/02/28|Yes|Yes|
+|erbi-qs|二筆|小林子-青松|Edited by xiaolinzi(小林子), Patent holder: Chen Jinsong (陈劲松)|GPLv2+(According to SCIM, xiaolinzi claim so)|Unknown|96103706.7:Expired on 2010/03/03; 96103708.3:Expired on 2007/02/28|Yes|Yes|
+|jyutping|粵語拼音 | | Not Sure  | | | | |Yes|
+|quick|速成|3,5|Unknown (Not quite sure we can safely assume its same with Cangjie)| | | | |Yes|
+|[scj6](http://www.scj2000.com/)|快速倉頡|6|麥志洪|GPLv3|[download.scj2000.net](http://download.scj2000.net/src/COPYING)|No|Yes|Yes|
+|stroke5|筆順五碼| |梁敬文 (Kingman Leung)| GPLv3+ | | | Yes |Yes|
+|[wu](http://input.foruto.com/wu/index.html)|上海吳語注音| |[input.foruto.com](http://input.foruto.com/wu/index.html)|GPLv3|[input.foruto.com](http://input.foruto.com/wu/index.html)|No|Yes|Yes|
+|[wubi (Wang)](http://www.wangma.com.cn/)|王碼五筆|86|王永民|Propriety, Shareware | A [list](http://www.wangma.com.cn/Sharing.asp?id=94) of organizations that bought Wangma Wubi's patent, which implies Wangma Wubi cannot be redistributed freely. |CN85100837 (Applicant Date is 1985.04.01, should be expired now) |[Compatible +](#+)|No|
+|[wubi (Jidian)](http://freeime.xoom.it/)|極點五筆|86|杜志民|Propriety, Free to download| [freeime.xoom.it](http://freeime.xoom.it/)| |Not sure|Yes|
+|[wubi (HaiFeng)](http://sunhaifeng.net/Villa/default.asp)|海峰五筆|86|孫海峰| BSD | | |Yes|No|
+|[xinhua](http://www.fhpi.cn/)|新華| |潘英|Need permission for commercial, otherwise free|[www.fhpi.cn](http://www.fhpi.cn/fiuxkex.htm)|CN1142075|Not in Fedora|Yes|
+|[yong](http://yong.uueasy.com)|永碼| |dgod|GPLv3| In yong-lin package from [u.115.com](http://u.115.com/folder/f9ed6f6b6b,0) |No|Yes|Yes|
+|[zhengma](http://www.china-e.com.cn/main/zhengma/jj.htm)|鄭碼| |鄭易里/鄭瓏|Propriety|[www.china-e.com.cn](http://www.china-e.com.cn/main/zhengma/jj.htm)|CN1043210| No | No|
+|[ziranma](http://www.zrm.com.cn/)|自然碼| |周志农|Propriety|Not sure: [this site](http://www.zrm.com.cn/download.htm) provides downloads for upgrade and "free( as in beer)", but does not reveal whether we can redistribute it|CN1204081|Not sure|Yes|
 
-===Legend===
-+: If it shows Compatible in "Free to pack", that means
+### Legend ###
+<a name="+"></a>+: If it shows Compatible in "Free to pack", that means

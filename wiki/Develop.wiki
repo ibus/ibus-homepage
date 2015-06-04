@@ -1,8 +1,15 @@
-#summary Guide for engine developer
-#labels Phase-Implementation
-#sidebar SideNavi
-= How to develop a new engine =
- * download ibus template project, and begin from it.
-{{{
+Guide for engine developer
+
+Phase-Implementation
+
+# How to develop a new engine #
+* download ibus template project, and begin from it.
+```
  $ git clone git://github.com/ibus/ibus-tmpl.git ibus-tmpl
-}}}
+```
+
+* [Sources](Sources)
+* [DevGuide](DevGuide)
+* [DevDesignForIBusRegistry](DevDesignForIBusRegistry)
+* [DevXML](DevXML)
+* [IBus API references](https://raw.githubusercontent.com/ibus/ibus-homepage/master/docs/ibus-1.5/index.html)

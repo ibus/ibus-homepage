@@ -1,37 +1,36 @@
-#summary Install IBus on CentOS
-#labels Featured,Phase-Deploy
-#sidebar SideNavi
-<wiki:toc max_depth="1" />
+Install IBus on CentOS
 
-= CentOS 6 =
-=== 1. Install necessary packages: ===
-{{{
+Featured,Phase-Deploy
+
+# CentOS 6 #
+### 1. Install necessary packages: ###
+```
 yum install ibus ibus-gtk ibus-qt
 yum install ibus-pinyin # or other engine(s) you want
 yum install im-chooser 
-}}}
-=== 2. Enable input method feature ===
+```
+### 2. Enable input method feature ###
 In GNOME dekstop, System => Preferences => Input Method
 
 Alternatively, run the following command as non-root user in terminal:
-{{{
+```
 im-chooser
-}}}
+```
 
-http://ibus.googlecode.com/svn/trunk/images/centos/im-chooser.png
+![](https://raw.githubusercontent.com/ibus/ibus-homepage/master/images/centos/im-chooser.png)
 
 In the poped up dialog, check "Enable input method feature".
 
 Make sure that "Use IBus" is highlighted. 
-=== 3. Add input methods ===
+### 3. Add input methods ###
 Click "Input Method Preferences...".
 
-http://ibus.googlecode.com/svn/trunk/images/centos/ibus-setup.png
+![](https://raw.githubusercontent.com/ibus/ibus-homepage/master/images/centos/ibus-setup.png)
 
 In the poped up "IBus Preferences" dialog, go to the "Input Method" tab and add input methods you need.
 
-=== 4. Logout, Re-login and Enjoy! ===
+### 4. Logout, Re-login and Enjoy! ###
 :)
 
-= CentOS 5 =
-Please use system provided [http://www.scim-im.org/ SCIM].
+# CentOS 5 #
+Please use system provided [SCIM](http://www.scim-im.org/).

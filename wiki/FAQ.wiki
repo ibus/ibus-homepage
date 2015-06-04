@@ -1,65 +1,64 @@
-#summary Frequently Asked Questions
-#labels Featured
-#sidebar SideNavi
-<wiki:toc max_depth="1" />
+Frequently Asked Questions
 
-= ibus =
-== My IBus tray icon is missing! ==
+Featured
+
+# ibus #
+## My IBus tray icon is missing! ##
 If you are using Ubuntu, this problem comes from Ubuntu specific patch.
 
 https://bugs.launchpad.net/ubuntu/+source/ibus/+bug/875435
 
 Try the following command:
-{{{
+```
 ibus-daemon -drx
-}}}
+```
 
-== I cannot use IBus on Kubuntu! ==
+## I cannot use IBus on Kubuntu! ##
 This is a packaging bug of Ubuntu.
 
 https://bugs.launchpad.net/ubuntu/+source/ibus/+bug/854333
 
 You can use the following command as a workaround:
-{{{
+```
 sudo apt-get install gnome-icon-theme
-}}}
+```
 
-= ibus-pinyin =
-== I'm using Arch. ibus-pinyin is always in Double Pinyin (双拼) mode! ==
+# ibus-pinyin #
+## I'm using Arch. ibus-pinyin is always in Double Pinyin (双拼) mode! ##
 Please use ibus-libpinyin instead, it is available in Community repo.
 
 ibus-libpinyin's UI is very similar to that of ibus-pinyin.
 
-If you want to help us, please continue discussion in Issue 1542
+If you want to help us, please continue discussion in [Issue 1559](https://github.com/ibus/ibus/issues/1559)
 
-= ibus-table =
+# ibus-table #
 
-== I cannot input Traditional Chinese characters with table-XXX! ==
+## I cannot input Traditional Chinese characters with table-XXX! ##
 Most likely, it is because your Chinese mode is not appropriate.
 
 You can use Ctrl+; to switch Chinese mode.
 
 If your mode cannot be saved, you may change get_chinese_mode function in /usr/share/ibus-table/engine/table.py to set your own global (apply to all tables) default.
 
-We already know that the above solution is not good enough, please refer to Issue 1188.
+We already know that the above solution is not good enough, please refer to [Issue 1206](https://github.com/ibus/ibus/issues/1206).
 
-== How can I change number of candidates in table-XXX? ==
-you may change {{{_page_size = 6}}} (change 6 to value you want) in /usr/share/ibus-table/engine/table.py to set your own global (apply to all tables) default.
+## How can I change number of candidates in table-XXX? ##
+you may change `_page_size = 6` (change 6 to value you want) in /usr/share/ibus-table/engine/table.py to set your own global (apply to all tables) default.
 
-We already know that the above solution is not good enough, please refer to Issue 1474.
+We already know that the above solution is not good enough, please refer to [Issue 1491](https://github.com/ibus/ibus/issues/1491).
 
-== How can I change the behavior of Space Key in table-XXX? I want to use Space Key as next page rather than commit. ==
+## How can I change the behavior of Space Key in table-XXX? I want to use Space Key as next page rather than commit. ##
 You may use the hacks found in the following page, check history version if needed.
 
 http://zh.wikipedia.org/wiki/IBus
 
 They are global (apply to all tables) change also. We haven't verified them yet.
 
-We already know that the above solution is not good enough, please refer to Issue 861.
+We already know that the above solution is not good enough, please refer to [Issue 881](https://github.com/ibus/ibus/issues/881).
 
-= unknown =
+# unknown #
 
-== What if my problem is not listed or I don't understand the answer? ==
+## What if my problem is not listed or I don't understand the answer? ##
 Free feel to ask a question in ibus-user.
 
 https://groups.google.com/group/ibus-user/
