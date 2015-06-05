@@ -21,4 +21,4 @@
   * [DevGuide](DevGuide)
   * [DevDesignForIBusRegistry](DevDesignForIBusRegistry)
   * [DevXML](DevXML)
-  * [IBus API references](https://raw.githubusercontent.com/ibus/ibus-homepage/master/docs/ibus-1.5/index.html)
+  * [IBus API references](http://ibus.github.io/docs/ibus-1.5/index.html)

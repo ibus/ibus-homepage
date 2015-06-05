@@ -1,4 +1,4 @@
-# ![](https://raw.githubusercontent.com/ibus/ibus-homepage/master/images/logo.jpg) IBus - Intelligent Input Bus for Linux / Unix OS #
+# ![](http://ibus.github.io/images/logo.jpg) IBus - Intelligent Input Bus for Linux / Unix OS #
 Welcome to IBus project! It is a next generation input framework.
 
 [![](https://www.openhub.net/images/widget_logos/openhublogo.png "Support ibus by adding it to your stack at Open Hub")](https://www.openhub.net/stack_entries/new?project_id=ibus&ref=sample)
@@ -8,8 +8,8 @@ Welcome to IBus project! It is a next generation input framework.
 * Code license: [GNU Lesser GPL](http://www.gnu.org/licenses/lgpl.html)
 
 ## Document
-* [IBus 1.5 API References](https://raw.githubusercontent.com/ibus/ibus-homepage/master/docs/ibus-1.5/index.html)
-* [IBus 1.4 API References (Old version)](https://raw.githubusercontent.com/ibus/ibus-homepage/master/docs/ibus-1.4/index.html)
+* [IBus 1.5 API References](http://ibus.github.io/docs/ibus-1.5/index.html)
+* [IBus 1.4 API References (Old version)](http://ibus.github.io/docs/ibus-1.4/index.html)
 
 ## Quick links
 * [ReadMe](ReadMe)
@@ -35,10 +35,10 @@ Welcome to IBus project! It is a next generation input framework.
 We have an #ibus channel on irc.freenode.org for developers.
 
 ## Screen shots
-![](https://raw.githubusercontent.com/ibus/ibus-homepage/master/images/1.jpg)
+![](http://ibus.github.io/images/1.jpg)
 
-![](https://raw.githubusercontent.com/ibus/ibus-homepage/master/images/2.jpg)
-![](https://raw.githubusercontent.com/ibus/ibus-homepage/master/images/3.jpg)
+![](http://ibus.github.io/images/2.jpg)
+![](http://ibus.github.io/images/3.jpg)
 
 ## Links
 ### External links

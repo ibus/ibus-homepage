@@ -42,7 +42,7 @@ sudo zypper in ibus ibus-gtk ibus-qt ibus-pinyin ibus-pinyin-db-open-phrase
 ### 怎样切换出本输入法？ ###
 将鼠标点击要输入汉字的地方，点击一下，按 "Ctrl + Space"启动输入法，然后用鼠标在SCIM托盘上选择拼音输入法。
 
-![](https://raw.githubusercontent.com/ibus/ibus-homepage/master/images/pinyin-1.png)
+![](http://ibus.github.io/images/pinyin-1.png)
 
 ### 怎样翻页选字？ ###
 用户可以用 `PageUp`,`PageDown`, 逗号（,）句号（.） 和 减号（-），等于号（=）翻页。
@@ -55,7 +55,7 @@ sudo zypper in ibus ibus-gtk ibus-qt ibus-pinyin ibus-pinyin-db-open-phrase
 
 例如，输入拼音zhongguobeijing,
 
-![](https://raw.githubusercontent.com/ibus/ibus-homepage/master/images/pinyin-2.png)
+![](http://ibus.github.io/images/pinyin-2.png)
 
 "中国被京"是错误的用户自造词，它在第一个位置，用户按 "Ctrl + 1" 把这个自造词删除。
 
@@ -76,7 +76,7 @@ sudo zypper in ibus ibus-gtk ibus-qt ibus-pinyin ibus-pinyin-db-open-phrase
 | sj | 15时51分27秒 |
 | bsn | ╭∩╮（︶︿︶）╭∩╮鄙视你！|
 
-![](https://raw.githubusercontent.com/ibus/ibus-homepage/master/images/wiki-pinyin-4.png)
+![](http://ibus.github.io/images/wiki-pinyin-4.png)
 
 ### 如何在中文模式下方便的输入英语 ###
 用户只要输入字母 v 输入法将自动切换到英文输入模式，在这个临时的英文输入模式里，按回车键确认输入并返回中文输入模式，按ESC返回中文模式。
@@ -84,7 +84,7 @@ sudo zypper in ibus ibus-gtk ibus-qt ibus-pinyin ibus-pinyin-db-open-phrase
 当用户输入大写字母开头的英文时，不需要输入 v ，输入法就可以自动进入临时英文输入模式。
 
 在临时英语输入模式下，输入引擎将提过拼写检查，和建议功能。
-![](https://raw.githubusercontent.com/ibus/ibus-homepage/master/images/wiki-pinyin-7.png)
+![](http://ibus.github.io/images/wiki-pinyin-7.png)
 
 ### 什么是拼音纠错功能？ ###
 

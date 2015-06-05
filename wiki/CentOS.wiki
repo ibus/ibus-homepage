@@ -17,7 +17,7 @@ Alternatively, run the following command as non-root user in terminal:
 im-chooser
 ```
 
-![](https://raw.githubusercontent.com/ibus/ibus-homepage/master/images/centos/im-chooser.png)
+![](http://ibus.github.io/images/centos/im-chooser.png)
 
 In the poped up dialog, check "Enable input method feature".
 
@@ -25,7 +25,7 @@ Make sure that "Use IBus" is highlighted.
 ### 3. Add input methods ###
 Click "Input Method Preferences...".
 
-![](https://raw.githubusercontent.com/ibus/ibus-homepage/master/images/centos/ibus-setup.png)
+![](http://ibus.github.io/images/centos/ibus-setup.png)
 
 In the poped up "IBus Preferences" dialog, go to the "Input Method" tab and add input methods you need.
 
