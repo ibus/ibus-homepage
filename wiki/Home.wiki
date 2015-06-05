@@ -35,10 +35,10 @@ Welcome to IBus project! It is a next generation input framework.
 We have an #ibus channel on irc.freenode.org for developers.
 
 ## Screen shots
-![](http://ibus.github.io/images/1.jpg)
+![](http://ibus.github.io/images/1.png)
 
-![](http://ibus.github.io/images/2.jpg)
-![](http://ibus.github.io/images/3.jpg)
+![](http://ibus.github.io/images/2.png)
+![](http://ibus.github.io/images/3.png)
 
 ## Links
 ### External links
